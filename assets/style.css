@@ -17,7 +17,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9;
+    /* z-index: 9; */
     background: #1a1a1a;
 }
 
@@ -27,7 +27,7 @@ body{
 }
 
 .link a{
-    color: #fff;
+    color: pink;
     opacity: 0.5;
     text-decoration: none;
     padding: 10px 30px;
@@ -55,7 +55,7 @@ body{
 }  */
 
 .kelton {
-    color: #fff;
+    color: pink;
     font-size: 150px;
     font-weight: 200;
     z-index: 8;
