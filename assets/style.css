@@ -27,7 +27,7 @@ body{
 }
 
 .link a{
-    color: pink;
+    color: rgb(221, 192, 255);
     opacity: 0.5;
     text-decoration: none;
     padding: 10px 30px;
@@ -55,7 +55,7 @@ body{
 }  */
 
 .kelton {
-    color: pink;
+    color: rgb(221, 192, 255);
     font-size: 150px;
     font-weight: 200;
     z-index: 8;
@@ -72,7 +72,7 @@ body{
     height: 80vh;
     width: 40%;
     object-fit: cover;
-    opacity: 0.3;
+    opacity: 0.4;
 }  
 
     
