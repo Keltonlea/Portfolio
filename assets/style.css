@@ -56,8 +56,9 @@ body{
 
 .kelton {
     color: #fff;
-    font-size: 120px;
+    font-size: 150px;
     font-weight: 200;
+    z-index: 8;
   
     
     
