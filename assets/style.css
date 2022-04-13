@@ -6,7 +6,6 @@ html {
     font-size:62.5%;
 }
 body{
-    /* font-weight:300; */
     font-size:1.75rem;
     line-height: 1.4;
     background: #191919;
@@ -16,14 +15,17 @@ body{
 p {
 margin-bottom:1rem;
 color:whitesmoke;
+text-align: center;
 }
 
-i {
-    margin-right: 1.5rem;
-    top: .5rem;
+footer{
+    text-align:center;
+    padding-bottom:1rem;
+    margin:1rem;
 }
 /* Class Selectors*/
-.navbar{
+
+.navbar {
     width: 100%;
     position:absolute;
     top: 0;
@@ -34,12 +36,12 @@ i {
     background: #1a1a1a;
 }
 
-.link-group{
+.link-group {
     list-style: none;
     display: flex;
 }
 
-.link a{
+.link a {
     color: whitesmoke;
     opacity: 0.5;
     text-decoration: none;
@@ -69,8 +71,10 @@ width:100%;
 height:100vh;  
 transition:1s;
 }
+
+
   
-.fig-img{
+.fig-img {
  position: absolute;
  top: 100px;
  right: 0;
@@ -80,12 +84,6 @@ object-fit: cover;
 opacity: 0.4;
 }  
 
-
-.title {
-    color:whitesmoke
-}
-
-
 .section-header {
 color:whitesmoke;
 padding-bottom: 5px;
@@ -93,11 +91,9 @@ font-family:sans-serif;
 margin:100px;
 font-size: 3.5rem;
 font-weight: lighter;
-opacity:0.5;
+text-align: center;
 }
-.section-header:hover {
-opacity: 1;
-}
+
 
 .row {
 display:flex;
@@ -107,36 +103,71 @@ margin-left: -1.5rem;
 margin-right:-1.5rem;
 }
 
+.justify-center {
+justify-content: center;
+}
+
 .card-colum {
 flex: 1 0 100%;
 padding:1.5rem;
 transition:flex-basis 500ms linear;
+margin-bottom: 1.5rem;
 }
 
 .card-projects {
-border-radius: .4em;
-padding: .7em 1.2em 0 1.2rem;
-opacity:0.4;
- color:whitesmoke;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding:2rem;
+    color:whitesmoke;
+    opacity:0.4;
+}
+.card-projects .card-header {
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer-space);
+    color: whitesmoke;
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
 }
 
 .card-projects:hover {
 transform: scale(1.1);
-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+/* box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4); */
 z-index: 3;
-border-color:#007bff;
 opacity:0.8;
 }
 .project-image {
     border-radius: 6px;
 }
-/*ID Selectors*/
-#contact {
-    font-size:1rem;
-    display:inline-block;
-}
-#contact a {
-    text-decoration:none;
+
+.contact-section-header {
+    text-align: center;
     color:whitesmoke;
-    border:2px whitesmoke;
+   
 }
+.contact-group {
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+}
+ul li {
+    display:inline;
+    color:whitesmoke;
+}
+
+/*ID Selectors*/
+#aboutme p{
+    padding-left: 150px;
+    padding-right:150px; 
+    
+}
+    
+
+/*media queries*/
