@@ -1,14 +1,28 @@
 
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size:62.5%;
+}
 body{
-    width: 100%;
-    max-width: 1400px;
-    display: block;
-    margin: auto;
-    min-height: 100vh;
+    /* font-weight:300; */
+    font-size:1.75rem;
+    line-height: 1.4;
     background: #191919;
     font-family:sans-serif;
 }
 
+p {
+margin-bottom:1rem;
+color:whitesmoke;
+}
+
+i {
+    margin-right: 1.5rem;
+    top: .5rem;
+}
+/* Class Selectors*/
 .navbar{
     width: 100%;
     position:absolute;
@@ -31,9 +45,9 @@ body{
     text-decoration: none;
     padding: 10px 30px;
     margin: 0 20px;
-    line-height: 80px;
+    line-height: 3;
     transition: .5s;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .link a:hover {
@@ -48,7 +62,7 @@ padding:0 130px;
 
 .kelton {
 color: whitesmoke;
-font-size: 130px;
+font-size: 13rem;
 font-weight: 180;
 display:flex;
 width:100%;
@@ -71,15 +85,13 @@ opacity: 0.4;
     color:whitesmoke
 }
 
-p{
-color:whitesmoke;
-}
+
 .section-header {
 color:whitesmoke;
 padding-bottom: 5px;
 font-family:sans-serif;
 margin:100px;
-font-size: xx-large;
+font-size: 3.5rem;
 font-weight: lighter;
 opacity:0.5;
 }
@@ -102,15 +114,10 @@ transition:flex-basis 500ms linear;
 }
 
 .card-projects {
-    /* background-color:lightgrey;
-    border: solid 2px lightgrey; */
-    border-radius: .4em;
-    padding: .7em 1.2em 0 1.2rem;
-    opacity:0.4;
-    color:whitesmoke;
-}
-.justify-center {
-    justify-content: center;
+border-radius: .4em;
+padding: .7em 1.2em 0 1.2rem;
+opacity:0.4;
+ color:whitesmoke;
 }
 
 .card-projects:hover {
@@ -122,4 +129,14 @@ opacity:0.8;
 }
 .project-image {
     border-radius: 6px;
+}
+/*ID Selectors*/
+#contact {
+    font-size:1rem;
+    display:inline-block;
+}
+#contact a {
+    text-decoration:none;
+    color:whitesmoke;
+    border:2px whitesmoke;
 }
