@@ -96,7 +96,8 @@ transition:1s;
 .fig-img {
  position: absolute;
  top: 100px;
- right: 0;
+ /* right: 0; */
+ justify-content: center;
  height: 80vh;
  width: 40%;
 object-fit: cover;
@@ -191,8 +192,8 @@ opacity:0.8;
         }
 
     .fig-img {
-        top:280px;
-        justify-content: center;
+        width:100%;
+        top:200px;
     }
  
  .card-column {
