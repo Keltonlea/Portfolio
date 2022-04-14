@@ -130,6 +130,7 @@ justify-content: center;
 .card-column {
     width:40%;
     justify-content: center;
+    transition: flex-basis 500ms linear;
     
 }
 .card-column:first-child {
@@ -183,6 +184,8 @@ opacity:0.8;
 
 /*media queries*/
 
+
+
 @media screen and (max-width:600px){
 
     nav ul {
@@ -220,7 +223,7 @@ opacity:0.8;
      flex-direction: column;
  }
 
-@media screen and (max-width: 400px) {
+ @media screen and (max-width: 400px) {
     .kelton {
         align-items: flex-end;
         justify-content: center;
