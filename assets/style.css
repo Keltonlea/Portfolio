@@ -88,11 +88,10 @@ display:flex;
 width:100%;
 height:100vh;  
 transition:1s;
+justify-content: center;
 
 }
 
-
-  
 .fig-img {
  position: absolute;
  top: 100px;
@@ -211,8 +210,9 @@ opacity:0.8;
      /* display:inline-flex; */
  }
  .kelton {
-     justify-content:center;
-     font-size: 11.5rem;
+     align-items: flex-end;
+     justify-content: center;
+     font-size: 11.5rem;   
  }
  
  .contact-group {
@@ -221,6 +221,10 @@ opacity:0.8;
  }
 
 @media screen and (max-width: 400px) {
+    .kelton {
+        align-items: flex-end;
+        justify-content: center;
+    }
 nav ul {
 flex-wrap:wrap;
 justify-content: center; 
@@ -228,7 +232,7 @@ justify-content: center;
 
 .fig-img {
 width:100%;
-top:200px;
+top:300px;
 }
 
 #about-me p {
