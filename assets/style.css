@@ -216,7 +216,7 @@ opacity:0.8;
      transition: flex-basis 500ms linear;
  }
  .card-column:first-child {
-     width:100%;
+     max-width:100%;
      justify-content: center;
  }
  .section-header {
@@ -277,7 +277,7 @@ top:300px;
 }
 
 .card-column:first-child {
-width: 100%;
+max-width: 100%;
 justify-content: center;
 flex-direction: column;
 }
