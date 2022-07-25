@@ -1,0 +1,386 @@
+:root {
+    --neon-orange: #ff0f87;
+    --almost-white: #fefefe;
+    --grey-black: #383838;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    background-color: var(--almost-white);
+  }
+  
+  nav {
+    background-color: var(--neon-orange);
+  }
+  
+  nav .navbar-nav a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 96%;
+    margin: 0.5rem auto 0 auto;
+    padding: 0 2.5rem;
+    padding-top: 0;
+    /*  max width no larger than 1200px as the page looks too sparse and project cards grow too big */
+    max-width: 1200px;
+  }
+  
+  section {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 1rem 0;
+  }
+  
+  i {
+    position: relative;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  footer {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  
+  footer p {
+    margin: 1rem;
+    color: grey;
+  }
+  
+  nav .name {
+    font-family: 'Architects Daughter', cursive;
+  }
+  
+  /* add fun rainbow effect on hover */
+  nav .name:hover,
+  footer p:hover {
+    color: transparent;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: 500ms ease;
+  }
+  
+  .section-header {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    border-bottom: solid 1.5px;
+    padding-bottom: 5px;
+  }
+  
+  /* container for project cards */
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: all 0.5s ease-in-out;
+    margin: 0 1%;
+  }
+  
+  .showcase-container {
+    flex: 1 0 20%;
+  }
+  
+  .card-container {
+    flex: 1 0 80%;
+  }
+  
+  /* set cards in other projects to 20% */
+  .card-container .card {
+    flex: 1 0 20%;
+  }
+  
+  .card {
+    /* this is needed for abosolute position of ribbon */
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    background-color: var(--almost-white);
+    margin: 4% 2%;
+    /* makes hover transform look smoother */
+    transition: 0.2s ease-in-out;
+  }
+  
+  /* add slight zoom/pop effect on card hover */
+  .projects .card:hover {
+    transform: scale(1.04);
+  }
+  
+  .project-cards {
+    flex-direction: row;
+  }
+  
+  /* add ribbon to card's that have a project-status */
+  .card[data-project-status]::before {
+    position: absolute;
+    content: "";
+    background: var(--neon-orange);
+    height: 3rem;
+    width: 3rem;
+    top: 1.4rem;
+    right: -0.5rem;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+  
+  .card[data-project-status]::after {
+    position: absolute;
+    content: attr(data-project-status);
+    top: 1rem;
+    right: -1.2rem;
+    padding: 0.2rem;
+    width: 9em;
+    background: var(--neon-orange);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--almost-white);
+    text-align: center;
+    box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+  }
+  
+  /* project card image */
+  .card img {
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+    /* needed to remove padding at bottom of img */
+    display: block;
+  }
+  
+  .card .card-label {
+    position: absolute;
+    bottom: 1rem;
+    background-color: var(--neon-orange);
+    width: 70%;
+    color: var(--almost-white);
+    opacity: 0.92;
+    border-radius: 0 0.25rem 0.25rem 0;
+    /* make sure label is always on top of card img */
+    z-index: 1;
+  }
+  
+  .card-label .card-header {
+    color: var(--almost-white);
+    text-align: center;
+    padding-bottom: 0.25rem;
+  }
+  
+  .card-label .card-desc {
+    font-weight: 200;
+    font-size: 1rem !important;
+    color: var(--almost-white);
+    text-align: center;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  
+  .card.contact {
+    text-align: left;
+    font-size: 1rem;
+    color: var(--grey-black);
+    margin: 1%;
+    padding: 1.5rem;
+  }
+  
+  .card.contact p {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .card.contact a {
+    color: inherit;
+  }
+  
+  .card.contact a:hover {
+    color: black;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .headshot {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 2%;
+    margin-bottom: 1rem;
+  }
+  
+  .section-header {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .about-me {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+  .about-me p {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .about-me .headshot {
+    display: none;
+  }
+  
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+  @media screen and (min-width: 768px) {
+    /* adjust header for larger screens */
+    header {
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+      margin: 0;
+      background-color: var(--neon-orange);
+      box-shadow: 0px 1px 10px #999;
+    }
+  
+    footer p {
+      margin: 1rem 35%;
+    }
+  
+    i {
+      margin-right: 1.5rem;
+    }
+  
+    /* hide headshot and top-line */
+    .headshot {
+      display: none;
+    }
+  
+    /* on tablets, set card containers both to 100% and as rows*/
+    .flex-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+  
+    .card {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-width: 40%;
+      margin: 2% 2%;
+    }
+  
+    .card.showcase {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .name {
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+  
+    .section-header {
+      text-align: center;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .card-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .showcase-container .card .card-label {
+      bottom: 2rem;
+    }
+  
+    .card-container .card .card-header {
+      font-size: 1.2rem;
+    }
+  
+    .card-container .card .card-desc {
+      font-size: 0.9rem !important;
+    }
+  
+    .card.contact {
+      min-width: auto;
+      max-width: 48%;
+    }
+  
+    .about-me .headshot {
+      display: inline;
+      float: left;
+      width: 16rem;
+      margin-right: 1.7rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    .projects {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+  
+    .flex-container {
+      flex: 0 0 48%;
+      max-width: 48%;
+    }
+  
+    .card-container {
+      margin-left: 1.2rem;
+    }
+  
+    .card-container .card-label {
+      width: 70%;
+      opacity: 0.95;
+      bottom: 0.8rem;
+    }
+  
+    .card-container .card .card-header {
+      font-size: 0.9rem;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+    }
+  
+    .card-container .card .card-desc {
+      font-size: 0.7rem !important;
+      font-weight: 300;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+    }
+  
+    .card.contact {
+      max-width: 33%;
+    }
+  
+    .card-container .card[data-project-status]::before {
+      top: 0.6rem;
+    }
+  
+    .card-container .card[data-project-status]::after {
+      top: 0.7rem;
+      font-size: 67%;
+    }
+  }
+  
